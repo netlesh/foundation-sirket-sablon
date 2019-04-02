@@ -1,4 +1,13 @@
-# ZURB WebApp Template
+# şirket sitesi şablon
+
+kurulum için gerekenler
+
+
+https://gitforwindows.org/
+
+https://nodejs.org/en/download/
+
+https://yarnpkg.com/en/docs/install#windows-stable
 
 [![devDependency Status](https://david-dm.org/zurb/foundation-zurb-template/dev-status.svg)](https://david-dm.org/zurb/foundation-zurb-template#info=devDependencies)
 
