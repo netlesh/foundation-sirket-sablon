@@ -1,13 +1,12 @@
 # şirket sitesi şablon
 
-kurulum için gerekenler
 
 
-https://gitforwindows.org/
-
-https://nodejs.org/en/download/
-
-https://yarnpkg.com/en/docs/install#windows-stable
+- index
+- Hakkımızda / kurumsal > tarihçe > ödüllerimiz > ik > sertifika
+- Katalog / Medya
+- Ürünler / Hizmetler / projeler
+- İletişim
 
 [![devDependency Status](https://david-dm.org/zurb/foundation-zurb-template/dev-status.svg)](https://david-dm.org/zurb/foundation-zurb-template#info=devDependencies)
 
@@ -27,9 +26,16 @@ This is the official ZURB Template for use with [Foundation for Sites](http://fo
 ## Installation
 
 To use this template, your computer needs:
+kurulum için gerekenler
 
-- [NodeJS](https://nodejs.org/en/) (Version 6 or greater recommended, tested with 6.11.4 and 8.12.0)
-- [Git](https://git-scm.com/)
+
+- [Git](https://gitforwindows.org/)
+
+- [NodeJS](https://nodejs.org/en/download/)
+
+https://yarnpkg.com/en/docs/install#windows-stable
+
+
 
 This template can be installed with the Foundation CLI, or downloaded and set up manually.
 
