@@ -2220,6 +2220,11 @@ csso@^3.5.0:
   dependencies:
     css-tree "1.0.0-alpha.29"
 
+cssom@0.2.x:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/cssom/-/cssom-0.2.5.tgz#2682709b5902e7212df529116ff788cd5b254894"
+  integrity sha1-JoJwm1kC5yEt9SkRb/eIzVslSJQ=
+
 cssom@0.3.x, "cssom@>= 0.3.2 < 0.4.0":
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/cssom/-/cssom-0.3.4.tgz#8cd52e8a3acfd68d3aed38ee0a640177d2f9d797"
@@ -2285,6 +2290,13 @@ debug-fabulous@1.X:
     debug "3.X"
     memoizee "0.4.X"
     object-assign "4.X"
+
+debug@*:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.1.1.tgz#3b72260255109c6b589cee050f1d516139664791"
+  integrity sha512-pYAIzeRo8J6KPEaJ0VWOh5Pzkbw/RetuzehGM7QRRX5he4fPHx2rdKMB256ehJCkX+XRQm16eZLqLNS8RSZXZw==
+  dependencies:
+    ms "^2.1.1"
 
 debug@2.6.9, debug@^2.1.2, debug@^2.2.0, debug@^2.3.3:
   version "2.6.9"
@@ -3286,6 +3298,14 @@ foundation-sites@^6.5.1:
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/foundation-sites/-/foundation-sites-6.5.1.tgz#a96da2da2dc81b84ff7730714ca1090445de4a42"
   integrity sha512-Z+FiBvogwIDjRlefJ5pYkVcmsGx3pbndRJ80+OvPvI9UwfKCif6YtOyTxpCjUoS3XBlOms5vYonfnasp2V2wZw==
+
+foundation@^4.2.1-1:
+  version "4.2.1-1"
+  resolved "https://registry.yarnpkg.com/foundation/-/foundation-4.2.1-1.tgz#4e497e2d9737533334b1e68354cd8dd039cbc47b"
+  integrity sha1-Tkl+LZc3UzM0seaDVM2N0DnLxHs=
+  dependencies:
+    stylus "~0.32.1"
+    stylus-type-utils "~0.0.3"
 
 fragment-cache@^0.2.1:
   version "0.2.1"
@@ -5450,6 +5470,11 @@ mixin-deep@^1.2.0:
     for-in "^1.0.2"
     is-extendable "^1.0.1"
 
+mkdirp@0.3.x:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.3.5.tgz#de3e5f8961c88c787ee1368df849ac4413eca8d7"
+  integrity sha1-3j5fiWHIjHh+4TaN+EmsRBPsqNc=
+
 "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
@@ -7527,6 +7552,20 @@ style-sherpa@^1.0.0:
     highlight.js "^8.8.0"
     marked "^0.3.5"
     string-template "^0.2.1"
+
+stylus-type-utils@~0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/stylus-type-utils/-/stylus-type-utils-0.0.3.tgz#f048334728bb5144ecd599c627553db64ea0a6bb"
+  integrity sha1-8EgzRyi7UUTs1ZnGJ1U9tk6gprs=
+
+stylus@~0.32.1:
+  version "0.32.1"
+  resolved "https://registry.yarnpkg.com/stylus/-/stylus-0.32.1.tgz#3d28275bd9f181085f8dd0fa52a8559696978212"
+  integrity sha1-PSgnW9nxgQhfjdD6UqhVlpaXghI=
+  dependencies:
+    cssom "0.2.x"
+    debug "*"
+    mkdirp "0.3.x"
 
 sum-up@^1.0.1:
   version "1.0.3"
