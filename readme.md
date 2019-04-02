@@ -8,33 +8,20 @@
 - Ürünler / Hizmetler / projeler
 - İletişim
 
-[![devDependency Status](https://david-dm.org/zurb/foundation-zurb-template/dev-status.svg)](https://david-dm.org/zurb/foundation-zurb-template#info=devDependencies)
-
-
-
-## Installation
-
-To use this template, your computer needs:
-kurulum için gerekenler
-
+## kurulum
 
 - [Git](https://gitforwindows.org/)
 
 - [NodeJS](https://nodejs.org/en/download/)
 
-https://yarnpkg.com/en/docs/install#windows-stable
+- [Yarn](https://yarnpkg.com/en/docs/install#windows-stable)
 
 
 
-This template can be installed with the Foundation CLI, or downloaded and set up manually.
 
-### Using the CLI
-
-Install the Foundation CLI with this command:
+Foundation CLI kurulumu:
 
 ```bash
-npm install foundation-cli --global
-yada
 yarn add foundation
 ```
 
