@@ -62,3 +62,25 @@
 // Motion UI
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+
+@import 'components/building-blocks/marketing-site-content-section';
+@import 'components/building-blocks/marketing-site-features';
+@import 'components/building-blocks/marketing-site-footer';
+@import 'components/building-blocks/marketing-site-hero';
+@import 'components/building-blocks/marketing-site-three-up';
+@import 'components/building-blocks/responsive-social-media-section';
+@import 'components/building-blocks/topbar-responsive';
+@import 'components/building-blocks/read-more';
+@import 'components/building-blocks/testimonial-block-vertical';
+@import 'components/building-blocks/featured-testimonials';
+@import 'components/building-blocks/testimonial-slider';
+@import 'components/building-blocks/product-feature-section';
+@import 'components/building-blocks/pricing-table';
+@import 'components/building-blocks/topbar-center-logo';
+@import 'components/building-blocks/app-feature-section';
+
+// özel stilim
+@import 'stil.scss';
+@import 'components/building-blocks/contact-us-section';
+@import 'components/building-blocks/image-hover-wrapper';

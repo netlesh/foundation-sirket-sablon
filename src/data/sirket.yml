@@ -1,0 +1,10 @@
+sirket-adi: "Şirket adı"
+tam-sirket-adi: "Şirket Tic. Ltd. Şti."
+adres: |
+    Paşakent Mah. 3009/5 Ada 3.Blk
+    da:4 77200
+tel: "555 490 8144"
+mail: "info@sirket.com.tr"
+linkedin: "https://tr.linkedin.com/in/cemkaan"
+
+# marka rengini $arka-rengi: "#35388a"; şeklinde _settings.scss dosyası içinde değiştirin

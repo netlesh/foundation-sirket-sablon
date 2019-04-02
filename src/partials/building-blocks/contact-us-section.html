@@ -1,0 +1,31 @@
+<section class="contact-us-section">
+  <div class="grid-x medium-unstack">
+    <div class="cell medium-6 contact-us-section-left">
+      <h3>{{sirket.tam-sirket-adi}} </h3>
+      <div class="responsive-embed">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6059.347073711385!2d29.260657628534!3d40.59296096738023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cafa4541d2c259%3A0x36a6d267b44da4e2!2sPa%C5%9Fakent+Mahallesi%2C+77200+Yalova+Merkez%2FYalova!5e0!3m2!1str!2str!4v1554204697598!5m2!1str!2str"
+          width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+
+      <ul class="contact-us-list">
+        <li class="address">{{sirket.adres}}</li>
+        <li class="email"><a href="mailto:">{{sirket.mail}}</a></li>
+        <li class="phone">
+          {{sirket.tel}}
+        </li>
+      </ul>
+    </div>
+    <div class="cell medium-6 contact-us-section-right">
+      <h3 class="contact-us-header">Biz Sizi Arayalım</h3>
+      <form class="contact-us-form">
+        <input type="text" placeholder="Adınız">
+        <input type="email" placeholder="e-posta">
+        <textarea name="message" id="" rows="12" placeholder="Mesajınızı buraya yazınız"></textarea>
+        <div class="contact-us-form-actions">
+          <input type="submit" class="button" value="Gönder" />
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
