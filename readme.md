@@ -23,10 +23,12 @@ Foundation CLI kurulumu:
 
 ```bash
 yarn add foundation
+yarn add gulp
 ```
 
 ```bash
 git clone https://github.com/netlesh/foundation-sirket-sablon sirketad
+
 ```
 
 
