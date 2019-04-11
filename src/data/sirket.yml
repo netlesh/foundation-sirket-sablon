@@ -7,4 +7,4 @@ tel: "555 490 8144"
 mail: "info@sirket.com.tr"
 linkedin: "https://tr.linkedin.com/in/cemkaan"
 
-# marka rengini $arka-rengi: "#35388a"; şeklinde _settings.scss dosyası içinde değiştirin
+# marka rengini $marka-renk: "#35388a"; şeklinde _settings.scss dosyası içinde değiştirin
