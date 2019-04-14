@@ -23,11 +23,17 @@ Foundation CLI kurulumu:
 
 ```bash
 yarn add foundation
-yarn add gulp-filelist
+
 ```
 
 ```bash
 git clone https://github.com/netlesh/foundation-sirket-sablon sirketadwww
+
+```
+belki  gulp ve gulp-filelist kurman da gerekebilir en iyisi kur gitsin
+```bash
+yarn add gulp
+yarn add gulp-filelist
 ```
 
 
