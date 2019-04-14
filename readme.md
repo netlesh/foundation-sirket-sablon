@@ -23,10 +23,11 @@ Foundation CLI kurulumu:
 
 ```bash
 yarn add foundation
+yarn add gulp-filelist
 ```
 
 ```bash
-git clone https://github.com/netlesh/foundation-sirket-sablon sirketad
+git clone https://github.com/netlesh/foundation-sirket-sablon sirketadwww
 ```
 
 
@@ -34,6 +35,14 @@ Now `cd` to your project name and to start your project run
 
 ```bash
 foundation watch
+```
+Resimleri img/urunler klasörünün içine ürün guruplarına ait klasor olusturarak ekleyin
+resimlerin büyük  boyutlarını "tam" klasörü içine, küçükleri "th" atın.
+irfanview batch ile hızlı boyutlandırma yapabilirsiniz.
+
+img/urunler içindeki resimlerin doğrudan ürün gurup sayfasına eklenmasi için
+```bash
+gulp data
 ```
 
 

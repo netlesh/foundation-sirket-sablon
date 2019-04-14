@@ -1,19 +1,20 @@
 'use strict';
 
 import plugins       from 'gulp-load-plugins';
-import yargs         from 'yargs';
-import browser       from 'browser-sync';
-import gulp          from 'gulp';
-import panini        from 'panini';
-import rimraf        from 'rimraf';
-import sherpa        from 'style-sherpa';
-import yaml          from 'js-yaml';
-import fs            from 'fs';
+import plugins from 'gulp-load-plugins';
+import yargs from 'yargs';
+import browser from 'browser-sync';
+import gulp from 'gulp';
+import panini from 'panini';
+import rimraf from 'rimraf';
+import sherpa from 'style-sherpa';
+import yaml from 'js-yaml';
+import fs from 'fs';
 import webpackStream from 'webpack-stream';
-import webpack2      from 'webpack';
-import named         from 'vinyl-named';
-import uncss         from 'uncss';
-import autoprefixer  from 'autoprefixer';
+import webpack2 from 'webpack';
+import named from 'vinyl-named';
+import uncss from 'uncss';
+import autoprefixer from 'autoprefixer';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -22,7 +23,12 @@ const $ = plugins();
 const PRODUCTION = !!(yargs.argv.production);
 
 // Load settings from settings.yml
-const { COMPATIBILITY, PORT, UNCSS_OPTIONS, PATHS } = loadConfig();
+const {
+  COMPATIBILITY,
+  PORT,
+  UNCSS_OPTIONS,
+  PATHS
+} = loadConfig();
 
 function loadConfig() {
   let ymlFile = fs.readFileSync('config.yml', 'utf8');
@@ -32,11 +38,32 @@ function loadConfig() {
 // Build the "dist" folder by running all of the below tasks
 // Sass must be run later so UnCSS can search for used classes in the others assets.
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, javascript, images, copy), sass, styleGuide));
+  gulp.series(clean, gulp.parallel(pages, javascript, images, copy), sass, styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
   gulp.series('build', server, watch));
+
+// ürünler listesi oluştur
+function urunlerinListeleriniOlustur(cb) {
+    var urunGuruplari = fs.readdirSync('src/assets/img/urunler');
+    urunGuruplari.forEach(listeYaz);
+    cb();
+}
+// dosya isimlerinden dosya yapmak için gulp-filelist kullan
+function listeYaz(element) {
+    //console.log(element);
+    return gulp.src('src/assets/img/urunler/'+element+'/tam/**/*')
+     .pipe(require('gulp-filelist')(element+'.yml',{ removeExtensions: true ,flatten: true ,destRowTemplate: listeFortmatlayici}))
+     .pipe(gulp.dest(PATHS.data+'/urunler/'));
+    
+     function listeFortmatlayici(filePath) {
+        return '-'+ '\n ad: \'' + filePath + '\'\r\n';
+    } 
+}
+
+// gulp data olarak çalıştırabilirsin
+exports.data = urunlerinListeleriniOlustur;
 
 // Delete the "dist" folder
 // This happens every time a build starts
@@ -84,7 +111,9 @@ function sass() {
 
   const postCssPlugins = [
     // Autoprefixer
-    autoprefixer({ browsers: COMPATIBILITY }),
+    autoprefixer({
+      browsers: COMPATIBILITY
+    }),
 
     // UnCSS - Uncomment to remove unused styles in production
     // PRODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
@@ -93,31 +122,33 @@ function sass() {
   return gulp.src('src/assets/scss/app.scss')
     .pipe($.sourcemaps.init())
     .pipe($.sass({
-      includePaths: PATHS.sass
-    })
+        includePaths: PATHS.sass
+      })
       .on('error', $.sass.logError))
     .pipe($.postcss(postCssPlugins))
-    .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
+    .pipe($.if(PRODUCTION, $.cleanCss({
+      compatibility: 'ie9'
+    })))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/assets/css'))
-    .pipe(browser.reload({ stream: true }));
+    .pipe(browser.reload({
+      stream: true
+    }));
 }
 
 let webpackConfig = {
   mode: (PRODUCTION ? 'production' : 'development'),
   module: {
-    rules: [
-      {
-        test: /\.js$/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [ "@babel/preset-env" ],
-            compact: false
-          }
+    rules: [{
+      test: /\.js$/,
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ["@babel/preset-env"],
+          compact: false
         }
       }
-    ]
+    }]
   },
   devtool: !PRODUCTION && 'source-map'
 }
@@ -130,7 +161,9 @@ function javascript() {
     .pipe($.sourcemaps.init())
     .pipe(webpackStream(webpackConfig, webpack2))
     .pipe($.if(PRODUCTION, $.uglify()
-      .on('error', e => { console.log(e); })
+      .on('error', e => {
+        console.log(e);
+      })
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/assets/js'));
@@ -141,7 +174,9 @@ function javascript() {
 function images() {
   return gulp.src('src/assets/img/**/*')
     .pipe($.if(PRODUCTION, $.imagemin([
-      $.imagemin.jpegtran({ progressive: true }),
+      $.imagemin.jpegtran({
+        progressive: true
+      }),
     ])))
     .pipe(gulp.dest(PATHS.dist + '/assets/img'));
 }
@@ -149,7 +184,8 @@ function images() {
 // Start a server with BrowserSync to preview the site in
 function server(done) {
   browser.init({
-    server: PATHS.dist, port: PORT
+    server: PATHS.dist,
+    port: PORT
   }, done);
 }
 
