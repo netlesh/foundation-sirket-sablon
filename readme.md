@@ -53,3 +53,7 @@ gulp data
 
 
 To create compressed, production-ready assets, run `yarn run build`.
+sourcemap DEVRE DIŞI BIRAKMAK İÇİN  
+```bash
+foundation build --production
+```
