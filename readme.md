@@ -22,19 +22,17 @@
 Foundation CLI kurulumu:
 
 ```bash
-yarn add foundation
+yarn global add foundation
+yarn global add gulp
+yarn global add gulp-filelist
 
 ```
 
 ```bash
-git clone https://github.com/netlesh/foundation-sirket-sablon sirketadwww
+git clone https://github.com/netlesh/foundation-sirket-sablon sirketwww
 
 ```
-belki  gulp ve gulp-filelist kurman da gerekebilir en iyisi kur gitsin
-```bash
-yarn add gulp
-yarn add gulp-filelist
-```
+
 
 
 Now `cd` to your project name and to start your project run 
