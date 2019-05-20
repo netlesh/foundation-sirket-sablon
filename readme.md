@@ -32,6 +32,12 @@ yarn global add gulp-filelist
 git clone https://github.com/netlesh/foundation-sirket-sablon sirketwww
 
 ```
+```bash
+yarn add foundation
+yarn add gulp
+yarn add gulp-filelist
+
+```
 
 
 
